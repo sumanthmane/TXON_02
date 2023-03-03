@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Calculator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            background-color: rgb(108,189,226);
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        .container{
+            padding: 24px 38%;
+        }
+        h1{
+            margin: 5px;
+            color: #435398;
+        }
+        table{
+            text-align: center;
+        }
+        .btn, .btn1{
+            width: 35px;
+            font-style: oblique;
+            color: aliceblue;
+            border: none;
+            border-radius: 15px;
+            background-color: darkslategrey;
+            height: 40px;
+            font-weight: bolder;
+         }
+         .btn1{
+            width: 75px;
+
+         }
+         input{
+            width:140px;
+            padding:8px;
+            font-weight: bolder;
+         }
+
+</style>
+</head>
+<body>
+    <div class ="container">
+        <h1>Calculator</h1>
+        <br>
+        <input type="text" id="input">
+        <br><br>
+        <table>
+            <tr>
+                <td colspan="2">
+                    <button class="btn1" onclick="document.getElementById('input').value=''">
+                    AC</button>
+                    </td>
+                    <td colspan="2">
+                        <button class="btn1" onclick="calc()">
+                            =</button>
+                    </td>
+                        
+                </tr>
+                <tr>
+           <td>
+                <button class="btn" onclick="document.getElementById('input').value+='7'">
+               7 </button>
+            </td>
+                
+            <td>
+                <button class="btn" onclick="document.getElementById('input').value+='8'">
+               8 </button>
+            </td>
+            <td>
+                <button class="btn" onclick="document.getElementById('input').value+='9'">
+               9 </button>
+            </td>
+            <td>
+                <button class="btn" onclick="document.getElementById('input').value+='+'">
+               + </button>
+            </td>
+            </tr>
+            <tr>
+            <td>
+                <button class="btn" onclick="document.getElementById('input').value+='4'">
+               4 </button>
+            </td>
+            <td>
+                <button class="btn" onclick="document.getElementById('input').value+='5'">
+               5 </button>
+            </td>
+            <td>
+                <button class="btn" onclick="document.getElementById('input').value+='6'">
+               6 </button>
+            </td>
+            <td>
+                <button class="btn" onclick="document.getElementById('input').value+='-'">
+               - </button>
+            </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="btn" onclick="document.getElementById('input').value+='1'">
+                   1 </button>
+                </td>
+                <td>
+                    <button class="btn" onclick="document.getElementById('input').value+='2'">
+                   2 </button>
+                </td>
+                <td>
+                    <button class="btn" onclick="document.getElementById('input').value+='3'">
+                   3 </button>
+                </td>
+                <td>
+                    <button class="btn" onclick="document.getElementById('input').value+='*'">
+                   * </button>
+                </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button class="btn1" onclick="documment.getElementById('input').value+='0'">
+                       0 </button>
+                    </td>
+
+                        <td>
+                            <button class="btn" onclick="document.getElementById('input').value+='.'">
+                           . </button>
+                        </td>
+                        <td>
+                            <button class="btn" onclick="document.getElementById('input').value+='/'">
+                           / </button>   
+                            </td>
+                            </tr>
+
+
+        </table>
+        </div>
+</body>
+<script>
+    function calc(){
+        document.getElementById('input').value=eval(document.getElementById('input').value);
+
+    }
+</script>
+</html>
